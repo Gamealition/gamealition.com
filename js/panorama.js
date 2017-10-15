@@ -13,7 +13,7 @@ Panorama.create = function(selector)
 
     pano.element = document.querySelector(selector);
     pano.slides  = Panorama.getSlides(pano.element);
-    pano.current = 0;
+    pano.current = Math.round(Math.random()*(pano.slides.length)); // random slide on page load
     pano.grabbed = false;
     pano.energy  = -1;
     pano.scroll  = 0;
